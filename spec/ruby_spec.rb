@@ -19,7 +19,7 @@ describe LanguagePack::Ruby do
           Dir.mktmpdir do |cache_path|
             Dir.chdir(build_path) do
               ruby = LanguagePack::Ruby.new(build_path, cache_path)
-              ruby.send(:install_binary, "yarn-0.22.0")
+              ruby.send(:install_binary, "yarn-0.24.6")
               expect(ENV["PATH"]).to include("vendor/yarn")
             end
           end
